@@ -122,6 +122,17 @@ return {
     },
   },
 
+  {
+    "rachartier/tiny-inline-diagnostic.nvim",
+    event = "VeryLazy",
+    opts = {
+      options = {
+        show_source = { enabled = true },
+        experimental = { use_window_local_extmarks = true },
+      },
+    },
+  },
+
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",

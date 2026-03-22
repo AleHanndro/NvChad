@@ -50,6 +50,8 @@ M.capabilities.textDocument.completion.completionItem = {
 M.defaults = function()
   dofile(vim.g.base46_cache .. "lsp")
   require("nvchad.lsp").diagnostic_config()
+  -- nvim's built-in virtual_text conflicts with tiny-inline-diagnostics
+  vim.diagnostic.config { virtual_text = false }
 
   vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
