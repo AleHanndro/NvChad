@@ -108,6 +108,20 @@ return {
     end,
   },
 
+  -- WARN: lua-language-server 3.16.4 MUST be installed
+  {
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = {
+      integrations = { cmp = false },
+      library = {
+        "lazy.nvim",
+        "ui/nvchad_types",
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
+  },
+
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",

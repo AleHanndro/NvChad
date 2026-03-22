@@ -22,14 +22,8 @@ end
 
 -- disable semanticTokens
 M.on_init = function(client, _)
-  if vim.fn.has "nvim-0.11" ~= 1 then
-    if client.supports_method "textDocument/semanticTokens" then
-      client.server_capabilities.semanticTokensProvider = nil
-    end
-  else
-    if client:supports_method "textDocument/semanticTokens" then
-      client.server_capabilities.semanticTokensProvider = nil
-    end
+  if client:supports_method "textDocument/semanticTokens" then
+    client.server_capabilities.semanticTokensProvider = nil
   end
 end
 
@@ -63,24 +57,7 @@ M.defaults = function()
     end,
   })
 
-  local lua_lsp_settings = {
-    Lua = {
-      runtime = { version = "LuaJIT" },
-      workspace = {
-        library = {
-          vim.fn.expand "$VIMRUNTIME/lua",
-          vim.fn.stdpath "data" .. "/lazy/ui/nvchad_types",
-          vim.fn.stdpath "data" .. "/lazy/lazy.nvim/lua/lazy",
-          "${3rd}/luv/library",
-        },
-      },
-    },
-  }
-
-  -- Use new vim.lsp.config API for Neovim 0.11+
   vim.lsp.config("*", { capabilities = M.capabilities, on_init = M.on_init })
-  vim.lsp.config("lua_ls", { settings = lua_lsp_settings })
-  vim.lsp.enable "lua_ls"
 end
 
 return M
