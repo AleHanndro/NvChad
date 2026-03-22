@@ -169,7 +169,16 @@ return {
   },
 
   {
+    "ibhagwan/fzf-lua",
+    cmd = "FzfLua",
+    opts = function()
+      return require "nvchad.configs.fzf-lua"
+    end,
+  },
+
+  {
     "nvim-telescope/telescope.nvim",
+    enabled = false,
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     cmd = "Telescope",
     opts = function()
