@@ -68,6 +68,16 @@ return {
   -- formatting!
   {
     "stevearc/conform.nvim",
+    keys = {
+      {
+        "<leader>fm",
+        function()
+          require("conform").format { lsp_fallback = true }
+        end,
+        mode = { "n", "x" },
+        desc = "general format file",
+      },
+    },
     opts = {
       formatters_by_ft = { lua = { "stylua" } },
     },
