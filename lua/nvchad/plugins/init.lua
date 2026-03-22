@@ -205,5 +205,6 @@ return {
     opts = function()
       return require "nvchad.configs.treesitter"
     end,
+    opts_extend = { "ensure_installed" },
   },
 }
