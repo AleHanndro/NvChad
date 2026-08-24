@@ -1,18 +1,3 @@
-<div align="center" markdown="1">
-  <sup>Special thanks to:</sup>
-  <br>
-  <br>
-  <a href="https://go.warp.dev/NvChad">
-    <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/c21102f7-bab9-4344-a731-0cf6b341cab2">
-  </a>
-
-### [Warp, built for coding with multiple AI agents](https://go.warp.dev/NvChad)
-[Available for MacOS, Linux, & Windows](https://go.warp.dev/NvChad) 
-
-</div>
-
-<br/>
-
 <h1 align="center">NvChad</h1>
 
 <div align="center">
