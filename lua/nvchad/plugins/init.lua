@@ -64,24 +64,6 @@ return {
     end,
   },
 
-  -- formatting!
-  {
-    "stevearc/conform.nvim",
-    keys = {
-      {
-        "<leader>fm",
-        function()
-          require("conform").format { lsp_fallback = true }
-        end,
-        mode = { "n", "x" },
-        desc = "general format file",
-      },
-    },
-    opts = {
-      formatters_by_ft = { lua = { "stylua" } },
-    },
-  },
-
   -- git stuff
   {
     "lewis6991/gitsigns.nvim",

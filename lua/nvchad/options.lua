@@ -12,7 +12,6 @@ vim.schedule(function()
   o.clipboard = "unnamedplus"
 end)
 o.cursorline = true
-o.cursorlineopt = "number"
 
 -- Indenting
 o.expandtab = true
