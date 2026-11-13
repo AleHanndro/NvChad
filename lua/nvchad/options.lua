@@ -7,7 +7,10 @@ o.laststatus = 3
 o.showmode = false
 o.splitkeep = "screen"
 
-o.clipboard = "unnamedplus"
+-- https://github.com/nvim-lua/kickstart.nvim/blob/0619d89884dec2fa911430fdc42796420421fd6b/init.lua#L113-L114
+vim.schedule(function()
+  o.clipboard = "unnamedplus"
+end)
 o.cursorline = true
 o.cursorlineopt = "number"
 
